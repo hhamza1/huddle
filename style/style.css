@@ -98,15 +98,23 @@ h1,h2,h3,h4,h5,h6 {
     object-fit: cover;
     align-self: center;
     text-align: center;
+    position: relative;
     padding: 20px !important;
 }
 
+.section-2__stats img {
+    max-width: 10%;
+    position: absolute;
+    top:0;
+    left: 25%;
+}
+
 .stats__header {
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 .stats__label {
-    font-size: .9rem;
+    font-size: 14px;
     color: hsl(192, 100%, 9%);
 }
 
