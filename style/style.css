@@ -118,6 +118,29 @@ h1,h2,h3,h4,h5,h6 {
     color: hsl(192, 100%, 9%);
 }
 
+/*================Grow Together Section=================*/
+
+.grow-together {
+    display: grid;
+    background: #F6FBFF;
+    padding: 2rem;
+    margin-left: -2rem; /*Override container padding*/
+    margin-right: -2rem;  /*Override container padding*/
+    
+
+}
+
+.grow-together img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    padding: 20px 0;
+    justify-self: center;
+}
+
+
+
+
 
 /*================Attribution Section=================*/
 
