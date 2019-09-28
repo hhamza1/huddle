@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
@@ -77,6 +76,31 @@ h1,h2,h3,h4,h5,h6 {
     height: 50%;
     align-self: end;
 }
+
+/*================Header Section=================*/
+
+
+.section-2 {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-row-end: 50px;
+}
+
+.section-2__img {
+    padding: 50px 0;
+}
+
+.section-2__img img {
+    width: 100%;
+}
+
+.section-2__stats {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
 
 
 /*================Attribution Section=================*/
