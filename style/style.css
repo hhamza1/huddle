@@ -145,8 +145,7 @@ h1,h2,h3,h4,h5,h6 {
 .illustrated_section h1 {
     text-align: center;
     align-self: center;
-    padding-left: 32px;
-    padding-right: 32px;
+    
 }
 
 .illustrated_section p {
@@ -251,7 +250,6 @@ footer {
     padding-top: 50px;
 }
 
-
 #footer-icon path {
     fill: #fff;
 }
@@ -267,7 +265,7 @@ footer {
 
 .contact__info {
     padding-left: 10px;
-    vertical-align: 3px;
+    vertical-align: 4px;
 }
 
 
@@ -298,3 +296,6 @@ footer {
     text-decoration: none;
 
 }
+
+
+/*=====================Desktop view=======================*/
