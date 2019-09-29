@@ -274,7 +274,7 @@ footer {
 .footer-top-border {
     background-image: url('../images/bg-footer-top-mobile.svg');
     background-repeat: repeat-x;
-    background-position: center;
+    background-size: cover;
     position: absolute;
     bottom: 99%;
     width: 375px;
