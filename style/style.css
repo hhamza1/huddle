@@ -120,27 +120,79 @@ h1,h2,h3,h4,h5,h6 {
 
 /*================Grow Together Section=================*/
 
-.grow-together {
+.illustrated_section {
     display: grid;
     background: #F6FBFF;
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 2rem 0;
     margin-left: -2rem; /*Override container padding*/
     margin-right: -2rem;  /*Override container padding*/
+    position: relative;
+}
+
+.top-wavy {
+    background: url('../images/bg-section-top-mobile-1.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 100%;
+    height: 112px;
+    width: 100%;
     
+}
+
+.bottom-wavy {
+    background: url('../images/bg-section-bottom-mobile-1.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 100%;
+    height: 112px;
+    width: 100%;
+    z-index:1;
 
 }
 
-.grow-together img {
+.illustrated_section img {
     max-width: 80%;
     height: auto;
     display: block;
     padding: 20px 0;
     justify-self: center;
+    background:url('../images/bg-section-top-desktop-1.svg');
 }
 
+.illustrated_section h1 {
+    text-align: center;
+    align-self: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.illustrated_section p {
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.clearfix:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+ }
 
 
 
+.no-bg {
+    background: #fff;
+    margin-top: 0;
+    padding: 2rem 0;
+}
+
+.no-bg > img {
+    margin-top: 10px;
+}
 
 /*================Attribution Section=================*/
 
