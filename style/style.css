@@ -11,8 +11,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .container {
+    display: grid;
     padding: 32px;
     padding-bottom:0;
+    grid-row-gap: 50px;
 }
 
 /*================Header Section=================*/
@@ -136,8 +138,7 @@ h1,h2,h3,h4,h5,h6 {
 .illustrated_section {
     display: grid;
     background: #F6FBFF;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 0 32px;
     margin: 32px 0;
     margin-left: -32px; /*Override container padding*/
     margin-right: -32px;  /*Override container padding*/
@@ -146,7 +147,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 .illustrated_section img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     display: block;
     padding: 20px 0;
@@ -170,8 +171,9 @@ h1,h2,h3,h4,h5,h6 {
     background-repeat: no-repeat;
     position: absolute;
     bottom: 99%;
-    width: 1440px;
     height: 100px;
+    width: 100%;
+
 }
 
 .bottom-wave {
@@ -179,26 +181,40 @@ h1,h2,h3,h4,h5,h6 {
     background-repeat: no-repeat;
     position: absolute;
     top: 99%;
-    width: 1440px;
+    width: 100%;
     height: 100px;
 }
 
-
 .no-bg {
-    background: none;
+    background: #fff;
 }
 
-.wave-padding {
-    padding-top: 30px;
-    padding-bottom: 100px;
+.no-bg img {
+    background: #fff;
+}
+
+.wave-margin {
+    margin-top: 30px;
+    margin-bottom: 100px;
 }
 
 .second-top {
     background-image: url('../images/bg-section-top-mobile-2.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 99%;
+    height: 100px;
+    width: 100%;
 }
 
 .second-bottom {
     background-image: url('../images/bg-section-bottom-mobile-2.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 99%;
+    width: 100%;
+    height: 100px;
+
 }
 
 
@@ -206,13 +222,14 @@ h1,h2,h3,h4,h5,h6 {
 
 .build-community {
     display: grid;
+    padding: 50px 0;
 }
 
 .build-community > h1 {
     text-align: center;
     font-size: 24px;
-    padding-top: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+    
 }
 
 
@@ -226,13 +243,13 @@ footer {
     padding-right: 32px;
     margin-left: -32px;
     margin-right: -32px;
+    position: relative;
 
 }
 
 .newsletter {
     padding: 30px 0;
     margin-top: 30px;
-    position: relative;
 }
 
 .newsletter > p {
@@ -312,7 +329,7 @@ footer {
 
 /*=====================Desktop view=======================*/
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
 
     /*===========Community=================*/
 
@@ -334,6 +351,71 @@ footer {
         max-width: 25%;
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+
+
+    /*==================Section 2========================*/
+    .col-desktop {
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: 50% 50%;
+        grid-gap: 250px;
+        justify-content: center;
+        margin: 32px 0;
+    }
+
+    .section-2__img{
+        display: grid;
+        justify-content: center;
+        padding-bottom: 32px;
+    }
+
+    .section-2__img img{
+       max-width: 70%;
+       justify-self: center;
+    }
+
+
+    .section-2__stats {
+        justify-self: flex-start;
+    }
+
+    .illustrated_section {
+        padding: 32px 0;
+    }
+
+    .top-wave {
+        background-image: url('../images/bg-section-top-desktop-1.svg');
+        background-size: 100%;
+    }
+
+    .bottom-wave {
+        background-image: url('../images/bg-section-bottom-desktop-1.svg');
+        background-size: 100%;
+    }
+
+    .illustrated_section {
+        display: grid;
+        grid-template-areas: "huddle-description huddle-img";
+        grid-template-columns: 40% 40%;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .huddle-img > img {
+        align-self: center;
+        justify-self: center;
+        background: #fff;
+    }
+
+    .huddle-description {
+        align-self: center;
+
+    }
+
+    .footer-top-border {
+        background-image: url('../images/bg-footer-top-desktop.svg');
+        background-repeat: repeat-x;
     }
 
 }
