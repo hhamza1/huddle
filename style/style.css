@@ -14,7 +14,8 @@ h1,h2,h3,h4,h5,h6 {
     display: grid;
     padding: 32px;
     padding-bottom:0;
-    grid-row-gap: 50px;
+    grid-row-gap: 100px;
+    width: 100vw;
 }
 
 /*================Header Section=================*/
@@ -171,8 +172,8 @@ h1,h2,h3,h4,h5,h6 {
     background-repeat: no-repeat;
     position: absolute;
     bottom: 99%;
-    height: 100px;
     width: 100%;
+    height: 100%;
 
 }
 
@@ -182,7 +183,7 @@ h1,h2,h3,h4,h5,h6 {
     position: absolute;
     top: 99%;
     width: 100%;
-    height: 100px;
+    height: 100%;
 }
 
 .no-bg {
@@ -193,18 +194,13 @@ h1,h2,h3,h4,h5,h6 {
     background: #fff;
 }
 
-.wave-margin {
-    margin-top: 30px;
-    margin-bottom: 100px;
-}
-
 .second-top {
     background-image: url('../images/bg-section-top-mobile-2.svg');
     background-repeat: no-repeat;
     position: absolute;
     bottom: 99%;
-    height: 100px;
     width: 100%;
+    height: 100%;
 }
 
 .second-bottom {
@@ -213,7 +209,7 @@ h1,h2,h3,h4,h5,h6 {
     position: absolute;
     top: 99%;
     width: 100%;
-    height: 100px;
+    height: 100%;
 
 }
 
@@ -222,7 +218,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .build-community {
     display: grid;
-    padding: 50px 0;
+    padding: 11vw  0;
 }
 
 .build-community > h1 {
@@ -244,6 +240,7 @@ footer {
     margin-left: -32px;
     margin-right: -32px;
     position: relative;
+
 
 }
 
@@ -275,6 +272,7 @@ footer {
     padding: 10px 20px;
 }
 
+
 .lorem-ipsum {
     padding-top: 50px;
 }
@@ -303,15 +301,28 @@ footer {
     background-repeat: repeat-x;
     background-size: cover;
     position: absolute;
-    bottom: 99%;
-    width: 375px;
-    height: 53px;
-    margin-right: -32px;
-    margin-left: -32px;
+    bottom: 100%;
+    width: 100%;
+    height: 31%;
 }
 
 
 /*================Attribution Section=================*/
+
+.social-media {
+    padding-top: 50px;
+}
+
+.social-media ul > li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.social-media > ul > li > i {
+    font-size: 30px;
+}
+
+
 
 
 .attribution { 
@@ -380,19 +391,7 @@ footer {
         justify-self: flex-start;
     }
 
-    .illustrated_section {
-        padding: 32px 0;
-    }
-
-    .top-wave {
-        background-image: url('../images/bg-section-top-desktop-1.svg');
-        background-size: 100%;
-    }
-
-    .bottom-wave {
-        background-image: url('../images/bg-section-bottom-desktop-1.svg');
-        background-size: 100%;
-    }
+    
 
     .illustrated_section {
         display: grid;
@@ -405,17 +404,126 @@ footer {
     .huddle-img > img {
         align-self: center;
         justify-self: center;
-        background: #fff;
     }
 
     .huddle-description {
         align-self: center;
-
     }
+
+    .build-community {
+        display: grid;  
+        align-content: center;
+    }
+
+    .build-community button {
+        justify-self: center;
+    }
+
+    .huddle-img{
+        order: 2;
+    }
+
+    .huddle-description {
+        order: 1;
+    }
+
+    footer {
+        display: grid;
+        grid-template-areas: "newsletter lorem-ipsum";
+        grid-template-columns: 50% 50%;
+        padding-bottom: 100px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .newsletter {
+        order: 2;
+        padding: 32px;
+    }
+
+    .newsletter p {
+        max-width: 60%;
+        padding-top: 30px;
+        padding-bottom: 32px;
+        font-size: 14px;
+    }
+
+    .newsletter h2 {
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+    }
+
+    .newsletter input {
+        max-width: 50%;
+        display: inline;
+        margin: 0;
+    }
+
+    .newsletter button {
+        float: none;
+        margin-left: 30px;
+    }
+
+    
+
+    .lorem-ipsum {
+        order: 1;
+        justify-self: center;
+        padding: 50px 32px 32px 50px;
+    }
+
+    .lorem-ipsum p {
+        max-width: 50%;
+        padding-top: 32px;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+    
+    .contact {
+        padding: 5px 0 ;
+    }
+
+
+    
+    
+
+
+}
+
+
+@media (min-width:376px) {
+    .top-wave {
+        background-image: url('../images/bg-section-top-desktop-1.svg');
+        background-size: 100%;
+        bottom: 25%;
+        margin-right: -32px;
+    }
+
+    .bottom-wave {
+        background-image: url('../images/bg-section-bottom-desktop-1.svg');
+        background-size: 100%;
+        top: 97%;
+        
+    }
+
+    .second-top{
+        background-image: url('../images/bg-section-top-desktop-2.svg');
+        background-size: 100%;
+        bottom: 25%;
+        
+    }
+
+    .second-bottom {
+        background-image: url('../images/bg-section-bottom-desktop-2.svg');
+        background-size: 100%;
+        top: 97%;
+        
+    }
+
 
     .footer-top-border {
         background-image: url('../images/bg-footer-top-desktop.svg');
-        background-repeat: repeat-x;
+        height: 158px;
+        
     }
-
 }
