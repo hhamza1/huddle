@@ -15,7 +15,6 @@ h1,h2,h3,h4,h5,h6 {
     padding: 32px;
     padding-bottom:0;
     grid-row-gap: 100px;
-    width: 100vw;
 }
 
 /*================Header Section=================*/
@@ -23,6 +22,7 @@ h1,h2,h3,h4,h5,h6 {
 .header {
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-gap: 32px;
     padding: 32px;
     padding-bottom: 0;
     align-items: center;
@@ -153,7 +153,6 @@ h1,h2,h3,h4,h5,h6 {
     display: block;
     padding: 20px 0;
     justify-self: center;
-    background:url('../images/bg-section-top-desktop-1.svg');
 }
 
 .illustrated_section h1 {
@@ -171,9 +170,10 @@ h1,h2,h3,h4,h5,h6 {
     background-image: url('../images/bg-section-top-mobile-1.svg');
     background-repeat: no-repeat;
     position: absolute;
-    bottom: 99%;
+    bottom: 23%;
     width: 100%;
     height: 100%;
+
 
 }
 
@@ -190,15 +190,11 @@ h1,h2,h3,h4,h5,h6 {
     background: #fff;
 }
 
-.no-bg img {
-    background: #fff;
-}
-
 .second-top {
     background-image: url('../images/bg-section-top-mobile-2.svg');
     background-repeat: no-repeat;
     position: absolute;
-    bottom: 99%;
+    bottom: 23%;
     width: 100%;
     height: 100%;
 }
@@ -210,6 +206,7 @@ h1,h2,h3,h4,h5,h6 {
     top: 99%;
     width: 100%;
     height: 100%;
+    margin-right: -32px;
 
 }
 
@@ -303,7 +300,8 @@ footer {
     position: absolute;
     bottom: 100%;
     width: 100%;
-    height: 31%;
+    height: 10%;
+    margin-left: -32px;
 }
 
 
@@ -328,7 +326,7 @@ footer {
 .attribution { 
     font-size: 11px; 
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .attribution a { 
@@ -340,7 +338,12 @@ footer {
 
 /*=====================Desktop view=======================*/
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
+
+
+    .header {
+        grid-gap: 0;
+    }
 
     /*===========Community=================*/
 
@@ -401,6 +404,7 @@ footer {
         align-content: center;
     }
 
+
     .huddle-img > img {
         align-self: center;
         justify-self: center;
@@ -408,6 +412,17 @@ footer {
 
     .huddle-description {
         align-self: center;
+        
+    }
+
+    .huddle-description h1 {
+        text-align: left;
+    }
+
+    .huddle-description p{
+        text-align: left;
+        max-width: 60%;
+        padding: 10px 0;
     }
 
     .build-community {
@@ -427,13 +442,24 @@ footer {
         order: 1;
     }
 
+    /*=================Flowing Conversation=========================*/
+
+
+    #flowing-conversation {
+        grid-column-start: 1;
+        grid-gap: 100px;
+    }
+
+    #flowing-conversation .huddle-img {
+        order: 1;
+        justify-self: flex-start;
+    }
+
+
     footer {
         display: grid;
-        grid-template-areas: "newsletter lorem-ipsum";
-        grid-template-columns: 50% 50%;
-        padding-bottom: 100px;
-        padding-left: 0;
-        padding-right: 0;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 50px;
     }
 
     .newsletter {
@@ -468,8 +494,7 @@ footer {
 
     .lorem-ipsum {
         order: 1;
-        justify-self: center;
-        padding: 50px 32px 32px 50px;
+        place-self: center;
     }
 
     .lorem-ipsum p {
@@ -478,24 +503,21 @@ footer {
         padding-bottom: 20px;
         font-size: 14px;
     }
+
+    .attribution {
+        order: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
     
     .contact {
         padding: 5px 0 ;
     }
 
-
-    
-    
-
-
-}
-
-
-@media (min-width:376px) {
     .top-wave {
         background-image: url('../images/bg-section-top-desktop-1.svg');
         background-size: 100%;
-        bottom: 25%;
+        bottom: 30%;
         margin-right: -32px;
     }
 
@@ -509,7 +531,7 @@ footer {
     .second-top{
         background-image: url('../images/bg-section-top-desktop-2.svg');
         background-size: 100%;
-        bottom: 25%;
+        bottom: 30%
         
     }
 
@@ -519,11 +541,9 @@ footer {
         top: 97%;
         
     }
-
-
     .footer-top-border {
         background-image: url('../images/bg-footer-top-desktop.svg');
         height: 158px;
-        
+        margin-left: 0;
     }
 }
