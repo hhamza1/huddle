@@ -22,7 +22,6 @@ h1,h2,h3,h4,h5,h6 {
 .header {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-gap: 32px;
     padding: 32px;
     padding-bottom: 0;
     align-items: center;
@@ -339,11 +338,6 @@ footer {
 /*=====================Desktop view=======================*/
 
 @media (min-width: 1025px) {
-
-
-    .header {
-        grid-gap: 0;
-    }
 
     /*===========Community=================*/
 
