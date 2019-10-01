@@ -541,3 +541,13 @@ footer {
         margin-left: 0;
     }
 }
+
+@media (min-width: 376px) and (max-width: 1024px) {
+    .top-wave, 
+    .bottom-wave, 
+    .second-top,
+    .second-bottom,
+    .footer-top-border {
+        visibility: hidden;
+    }
+}
